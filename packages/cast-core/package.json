@@ -1,0 +1,46 @@
+{
+  "name": "@jdion/cast",
+  "type": "module",
+  "version": "1.0.4",
+  "author": "Jonathan Dion <jonathandionalary@gmail.com> (https://github.com/jonathandion/)",
+  "license": "MIT",
+  "keywords": [
+    "cast",
+    "sender",
+    "castjs",
+    "chromecast",
+    "google"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.17.1"
+  },
+  "scripts": {
+    "dev": "concurrently 'pnpm run build:commonjs --watch' 'pnpm run types:emit --watch'",
+    "build": "pnpm build:commonjs && pnpm types:emit",
+    "build:commonjs": "swc src --out-dir dist --config-file=../../.swcrc.json",
+    "types:emit": "tsc --project tsconfig.lib.json",
+    "types:check": "tsc --noEmit",
+    "test": "jest src",
+    "cleanup": "rm -rf ./dist",
+    "prebuild": "pnpm cleanup"
+  },
+  "dependencies": {
+    "@jdion/dom": "workspace:*",
+    "events": "^3.3.0",
+    "p-memoize": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.244",
+    "@types/chromecast-caf-sender": "^1.0.5",
+    "@types/events": "^3.0.0",
+    "typescript": "^5.2.2"
+  }
+}

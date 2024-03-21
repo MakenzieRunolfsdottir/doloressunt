@@ -1,0 +1,30 @@
+{
+  "name": "@jdion/eslint-config-ts",
+  "version": "1.0.4",
+  "description": "ESLint config for TypeScript projects.",
+  "author": "Jonathan Dion <jonathandionalary@gmail.com> (https://github.com/jonathandion/)",
+  "license": "MIT",
+  "homepage": "https://github.com/jonathandion/mono",
+  "keywords": [
+    "eslint-config",
+    "eslint-config-ts",
+    "eslint-config-typescript"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "src/index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@jdion/eslint-config-core": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-jest-dom": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
+}

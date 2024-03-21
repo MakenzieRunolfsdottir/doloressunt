@@ -1,0 +1,14 @@
+{
+  "index": {
+    "type": "page",
+    "display": "hidden"
+  },
+  "eslint-config": {
+    "type": "page",
+    "display": "hidden"
+  },
+  "cast": {
+    "type": "page",
+    "display": "hidden"
+  }
+}
